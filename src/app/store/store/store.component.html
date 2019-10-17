@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col bg-dark text-white">
+      <a class="navbar-brand">SPORTS STORE</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3 p-2">
+        <button type="button" class="btn btn-block btn-outline-primary">
+          Home
+        </button>
+        <button routerLink="/admin/login" type="button" class="btn btn-block btn-danger m-t-3">
+          Admin
+        </button>
+    </div>
+    <div  class="col-9 p-2" >
+      <div *ngFor="let item of productList" class="card m-1 p-1 bg-light">
+        <h4>
+            {{item.name}}
+          <span class="badge badge-pill badge-primary float-right">
+              {{item.price}}$
+          </span>
+        </h4>
+        <div class="card-text bg-white p-1">
+            {{item.description}}
+
+            <button type="button" class="btn btn-success btn-sm float-right">
+                Add To Cart
+              </button>
+            
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

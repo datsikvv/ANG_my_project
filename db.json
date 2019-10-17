@@ -1,0 +1,69 @@
+{
+"products":[
+  {
+    "id": 1,
+    "name": "Kayak",
+    "category": "Watersports",
+    "description": "a boat for one person",
+    "price": 200
+  },
+  {
+    "id": 2,
+    "name": "Ball",
+    "category": "soccer",
+    "description": "play soccer with friends",
+    "price": 50
+  },
+  {
+    "id": 3,
+    "name": "Kayak",
+    "category": "water",
+    "description": "a boat for one person",
+    "price": 200
+  },
+  {
+    "id": 4,
+    "name": "Kayak",
+    "category": "water",
+    "description": "a boat for one person",
+    "price": 200
+  },
+  {
+    "id": 5,
+    "name": "Kayak",
+    "category": "water",
+    "description": "a boat for one person",
+    "price": 200
+  },
+  {
+    "id": 6,
+    "name": "Kayak",
+    "category": "water",
+    "description": "a boat for one person",
+    "price": 200
+  },
+  {
+    "id": 7,
+    "name": "Kayak",
+    "category": "water",
+    "description": "a boat for one person",
+    "price": 200
+  },
+  {
+    "id": 8,
+    "name": "Kayak",
+    "category": "water",
+    "description": "a boat for one person",
+    "price": 200
+  },
+  {
+    "id": 9,
+    "name": "Kayak",
+    "category": "water",
+    "description": "a boat for one person",
+    "price": 200
+  }
+],
+
+"orders":[]
+}
