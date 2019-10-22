@@ -15,8 +15,8 @@ export class DbService {
    return  this.http.get<Product[]>('http://localhost:3000/products');
   }
 
-  ngOnInit() {
-   
-  }
+  public deleteProductById(id: number): Observable<any> {
+    return this.http.delete<Product[]>('http://localhost:3000/products/' + id);
+   }
 }
 
