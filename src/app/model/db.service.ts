@@ -18,5 +18,10 @@ export class DbService {
   public deleteProductById(id: number): Observable<any> {
     return this.http.delete<Product[]>('http://localhost:3000/products/' + id);
    }
+
+public addProduct(body: Product): Observable<object> {
+  return this.http.post('http://localhost:3000/products', body )
+}
+
 }
 

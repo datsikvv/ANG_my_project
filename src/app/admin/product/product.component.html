@@ -1,21 +1,7 @@
 <div class="container-fluid">
+
   <div class="row">
-    <div class="col bg-dark text-white">
-      <a class="navbar-brand">SPORTS STORE</a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3 p-2">
-        <button class="btn btn-info btn-block btn-outline-primary">
-          Products
-        </button>
-        <button class="btn btn-block btn-outline-primary">
-          Orders
-        </button>
-        <button  class="btn btn-block btn-danger m-t-3">
-          LogOuts
-        </button>
-    </div>
+
     <div  class="col-9 p-2" >
     <table class="table table-striped table-sm">
       <thead>
@@ -28,7 +14,7 @@
           <td>{{ item.category }}</td>
           <td>{{ item.price }}</td>
           <td>
-              <button class="btn btn-warning btn-outline-primary">
+              <button class="btn btn-warning btn-outline-primary" [routerLink]="'edit/'+item.id">
                   Edit
                 </button>
                 <button class="btn btn-danger btn-outline-primary" (click)="deleteProductById(item.id)">
@@ -36,10 +22,10 @@
                   </button>
             
           </td>
-        </tr>
+        </tr> 
       </tbody>
     </table>
-    <button type="button" class="btn btn-primary">Create New Product</button>
+    <button type="button" class="btn btn-primary" routerLink="edit">Create New Product</button>
     </div>
   </div>
 </div>

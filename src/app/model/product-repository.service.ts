@@ -13,6 +13,12 @@ export class ProductRepositoryService {
   categoryList: string[];
 
   constructor(private dbService: DbService) { 
+    this.getList();
+      
+  }
+
+
+  private getList() {
     this.dbService.getProducts().subscribe((products: Product[]) => {
       this.productList = products;
       this.categoryList = this.productList.map(p => {
@@ -20,8 +26,6 @@ export class ProductRepositoryService {
       }).filter((c, index, array) => array.indexOf(c) == index).sort();
     })
   }
-
-
   
   public getAllProducts(category: string | null): Product[] {
    return this.productList.filter((p) => {
@@ -41,8 +45,15 @@ export class ProductRepositoryService {
   }
 
   public deleteProductById(id: number) {
-    this.dbService.deleteProductById(id).subscribe(() => {});
+    this.dbService.deleteProductById(id).subscribe(() => {
+      this.getList();
+    });
   }
      
+  public createProduct(body: Product):void {
+    this.dbService.addProduct(body).subscribe(() => {
+      this.getList();
+    });
+  }
 
 }
