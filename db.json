@@ -97,13 +97,6 @@
       "description": "vv",
       "price": "23",
       "id": 29
-    },
-    {
-      "name": "vvv",
-      "category": "vvv",
-      "description": "vv",
-      "price": "23",
-      "id": 30
     }
   ],
   "orders": []
