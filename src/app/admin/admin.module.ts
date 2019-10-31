@@ -7,6 +7,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { MainComponent } from './main/main.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './login/login.service';
 
 
 
@@ -18,6 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     OrdersComponent, 
     ProductFormComponent, 
     MainComponent],
+  providers: [
+    LoginService
+  ],
   imports: [
     CommonModule,
     RouterModule,

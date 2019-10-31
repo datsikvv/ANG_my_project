@@ -8,6 +8,7 @@ import { ProductComponent } from './admin/product/product.component';
 import { MainComponent } from './admin/main/main.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { OrdersComponent } from './admin/orders/orders.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [ 
@@ -16,11 +17,11 @@ const routes: Routes = [
   {
     path: 'admin', component: MainComponent ,
     children: [
-      {path: '', pathMatch: 'full', redirectTo: 'products'},
-      {path: 'products', component: ProductComponent},
-      {path: 'products/:mode', component: ProductFormComponent},
-      {path: 'products/:mode/:id', component: ProductFormComponent},
-      {path: 'orders', component: OrdersComponent},
+      {path: '', pathMatch: 'full', redirectTo: 'products', canActivate: [AuthGuard]},
+      {path: 'products', component: ProductComponent, canActivate: [AuthGuard]},
+      {path: 'products/:mode', component: ProductFormComponent, canActivate: [AuthGuard]},
+      {path: 'products/:mode/:id', component: ProductFormComponent, canActivate: [AuthGuard]},
+      {path: 'orders', component: OrdersComponent, canActivate: [AuthGuard]},
       {path: 'login', component: LoginComponent}
     ]
   },
